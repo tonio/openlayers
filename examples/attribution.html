@@ -12,7 +12,13 @@
         <script type="text/javascript">
             var map;
             function init(){
-                map = new OpenLayers.Map('map');
+                map = new OpenLayers.Map('map', {
+                    controls: [
+                        new OpenLayers.Control.Navigation(),
+                        new OpenLayers.Control.Zoom(),
+                        new OpenLayers.Control.Attribution()
+                        ]
+                });
 
                 var ol_wms = new OpenLayers.Layer.WMS( "OpenLayers WMS",
                     "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'},

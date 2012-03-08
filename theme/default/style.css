@@ -90,14 +90,7 @@ div.olControlMousePosition {
     -moz-border-radius: 1em 0 0 0;
 }
 
-.olControlOverviewMapMinimizeButton,
-.olControlOverviewMapMaximizeButton {
-    height: 18px;
-    width: 18px;
-    right: 0;
-    bottom: 80px;
-    cursor: pointer;
-}
+
 
 .olControlOverviewMapExtentRectangle {
     overflow: hidden;
@@ -303,7 +296,7 @@ div.olControlSaveFeaturesItemInactive {
  */
 .olControlLayerSwitcher {
     position: absolute;
-    top: 25px;
+    top: 1px;
     right: 0;
     width: 20em;
     font-family: sans-serif;
@@ -321,7 +314,9 @@ div.olControlSaveFeaturesItemInactive {
     padding-left: 10px;
     padding-bottom: 5px;
     padding-right: 10px;
-    background-color: darkblue;
+    background-color: #aaa;
+    background: rgba(0,0,0,0.4);
+    border-radius: 3px 0 0 3px;
 }
 
 .olControlLayerSwitcher .layersDiv .baseLbl,
@@ -338,11 +333,25 @@ div.olControlSaveFeaturesItemInactive {
 
 .olControlLayerSwitcher .maximizeDiv,
 .olControlLayerSwitcher .minimizeDiv {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     top: 5px;
     right: 0;
+    position: absolute;
+    background: #aaa;
+    background: rgba(0,0,0,0.3);
+    line-height: 19px;
+    text-align: center;
+    text-shadow: 0 0 3px #000;
+    border-radius: 3px 0 0 3px;
+    font-size: 18px;
+    font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+    font-weight: bold;
     cursor: pointer;
+}
+.olControlLayerSwitcher .maximizeDiv:hover,
+.olControlLayerSwitcher .minimizeDiv:hover {
+    background: rgba(0,0,0,0.4);
 }
 
 .olBingAttribution {
@@ -450,6 +459,7 @@ div.olControlZoom a {
     background: #666666; /* fallback for IE - IE6 requires background shorthand*/
     background: rgba(0, 0, 0, 0.3);
     filter: alpha(opacity=60);
+    text-shadow: 0 0 3px #000;
 }
 div.olControlZoom a:hover {
     background: #444444; /* fallback for IE */
