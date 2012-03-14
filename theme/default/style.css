@@ -315,7 +315,7 @@ div.olControlSaveFeaturesItemInactive {
     padding-bottom: 5px;
     padding-right: 10px;
     background-color: #aaa;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     border-radius: 3px 0 0 3px;
 }
 
@@ -332,22 +332,28 @@ div.olControlSaveFeaturesItemInactive {
 }
 
 .olControlLayerSwitcher .maximizeDiv,
-.olControlLayerSwitcher .minimizeDiv {
+.olControlLayerSwitcher .minimizeDiv,
+div.olControlZoom a{
     width: 22px;
     height: 22px;
-    top: 5px;
-    right: 0;
-    position: absolute;
-    background: #aaa;
+    background: #666;
     background: rgba(0,0,0,0.3);
     line-height: 19px;
     text-align: center;
     text-shadow: 0 0 3px #000;
-    border-radius: 3px 0 0 3px;
     font-size: 18px;
     font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
     font-weight: bold;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+.olControlLayerSwitcher .maximizeDiv,
+.olControlLayerSwitcher .minimizeDiv{
+    border-radius: 3px 0 0 3px;
+    top: 5px;
+    right: 0;
+    position: absolute;
 }
 .olControlLayerSwitcher .maximizeDiv:hover,
 .olControlLayerSwitcher .minimizeDiv:hover {
@@ -447,19 +453,7 @@ div.olControlZoom a {
     display: block;
     margin: 1px;
     padding: 0;
-    color: white;
-    font-size: 18px;
-    font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;    
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    height: 22px;
-    width:22px;
-    line-height: 19px;
-    background: #666666; /* fallback for IE - IE6 requires background shorthand*/
-    background: rgba(0, 0, 0, 0.3);
     filter: alpha(opacity=60);
-    text-shadow: 0 0 3px #000;
 }
 div.olControlZoom a:hover {
     background: #444444; /* fallback for IE */
